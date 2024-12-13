@@ -13,4 +13,4 @@ This repository contains exercises completed for the UI Bootcamp.
 
 ## Deployed Landing Page URL
 
-The landing page for this repository is available at: [Week 1 Landing Page](https://kiran-thomas-jacob.netlify.app/).
+The landing page for this repository is available at: [Week 1 Landing Page](https://kiran-thomas-jacob-uibootcamp.netlify.app/).
