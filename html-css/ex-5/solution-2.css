@@ -1,0 +1,105 @@
+@import url(variables-2.css);
+
+body {
+    background-color: var(--background-color, white);
+    color: var(--text-color, rgb(87, 87, 87));
+    font-family: var(--body-font-family, Arial, sans-serif);
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar1 main-content"
+        "sidebar2 main-content"
+        "footer footer";
+    grid-template-rows: 100px 1fr 1fr 100px;
+    grid-template-columns: 200px 1fr 200px;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    overflow: auto;
+}
+
+.dark-mode {
+    --background-color: black;
+    --text-color: white;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--primary-color, black);
+    padding: var(--spacing-unit, 10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    grid-area: main-content;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.sidebar {
+    background-color: var(--secondary-color, gray);
+    padding: var(--spacing-unit, 10px);
+}
+
+#sidebar1 {
+    grid-area: sidebar1;
+}
+
+#sidebar2 {
+    grid-area: sidebar2;
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--secondary-color, gray);
+    padding: var(--spacing-unit, 10px);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--text-color, black);
+    text-decoration: none;
+    display: block;
+    padding: var(--spacing-unit, 10px);
+}
+
+nav a:hover {
+    background-color: var(--primary-color, black);
+    color: var(--text-color, gray);
+}
+
+article {
+    margin-bottom: var(--spacing-unit, 10px);
+}
+
+h1,
+h2 {
+    font-family: var(--header-font-family, 'Georgia', serif);
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-unit, 10px);
+}
+
+th,
+td {
+    border: 1px solid var(--text-color, black);
+    padding: var(--spacing-unit, 10px);
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--secondary-color, #f2f2f2);
+}

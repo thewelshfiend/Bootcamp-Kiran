@@ -1,0 +1,9 @@
+:root {
+    --table-bg-color: #f5f5f5;
+    --table-border-color: #ddd;
+    --table-hover-bg-color: #f0f0f0;
+    --table-header-bg-color: #4CAF50;
+    --table-header-font-color: #fff;
+    --table-row-font-color: #555;
+    --table-row-hover-font-color: #333;
+}

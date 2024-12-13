@@ -1,0 +1,8 @@
+:root {
+    --primary-color: #2980b9;
+    --secondary-color: #73e677;
+    --background-color: #f9f9f9;
+    --header-font-family: 'Poppins', sans-serif;
+    --body-font-family: 'Roboto', sans-serif;
+    --spacing-unit: 16px;
+}

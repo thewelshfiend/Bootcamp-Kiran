@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        p,
+        ul,
+        ol {
+            margin-bottom: 10px;
+        }
+
+        blockquote {
+            border-left: 4px solid #dfdfdf;
+            font-style: italic;
+            margin: 10px 0px 10px 20px;
+            padding-left: 20px;
+        }
+
+        code {
+            padding: 2px 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Queries</h2>
+            <article>
+                <h2>LLM link: <a href="https://chatgpt.com/share/675b246e-16c4-8009-96f2-bd5082513635">https://chatgpt.com/share/675b246e-16c4-8009-96f2-bd5082513635</a></h2>
+            </article>
+            <dl>
+                <dt><strong>What is cascading of styles and overriding of styles in CSS?</strong></dt>
+                <dd>
+                    Cascading in CSS refers to the way styles are applied to elements based on specific rules and
+                    priorities when multiple styles are defined for the same element. The word "cascading" describes how
+                    CSS determines which style rule applies if there are conflicts. The priority is determined by the
+                    following order:
+                    <br><br>
+                    <strong>Inline Styles:</strong>
+                    <ul>
+                        <li>These styles are applied directly within the HTML element using the <code>style</code>
+                            attribute.</li>
+                        <li>Example: <code>&lt;div style="color: red;"&gt;</code></li>
+                    </ul>
+                    <br>
+                    <strong>Internal Styles:</strong>
+                    <ul>
+                        <li>Defined within a <code>&lt;style&gt;</code> block in the <code>&lt;head&gt;</code> section
+                            of the HTML document.</li>
+                        <li>Example:
+                            <pre>
+                  &lt;style&gt;
+                    div {
+                      color: blue;
+                    }
+                  &lt;/style&gt;
+                        </pre>
+                        </li>
+                    </ul>
+                    <br>
+                    <strong>External Stylesheets:</strong>
+                    <ul>
+                        <li>Defined in a separate <code>.css</code> file linked to the HTML document using the
+                            <code>&lt;link&gt;</code> tag.
+                        </li>
+                        <li>Example:
+                            <pre>
+                  &lt;link rel="stylesheet" href="styles.css"&gt;
+                        </pre>
+                        </li>
+                    </ul>
+                    <br>
+                    <strong>Browser Default Styles:</strong>
+                    <ul>
+                        <li>Browsers apply their default styles to elements when no explicit styles are defined.</li>
+                    </ul>
+                    <br>
+                    <strong>Priority Rules:</strong>
+                    <ul>
+                        <li><strong>Specificity:</strong> More specific selectors override less specific ones.
+                            <br>Example: <code>#id &gt; .class &gt; tag</code>
+                        </li>
+                        <li><strong>Order of Appearance:</strong> The last defined style in the CSS file (if all other
+                            factors are equal) takes precedence.</li>
+                        <li><strong>Importance:</strong> Styles marked with <code>!important</code> override other
+                            conflicting styles, regardless of specificity or order.</li>
+                    </ul>
+                    <br>
+                    <strong>Overriding of Styles in CSS:</strong>
+                    Overriding refers to applying a new style to an element that replaces a previously applied style.
+                    This can happen due to:
+                    <ul>
+                        <li><strong>Inheritance:</strong>
+                            <ul>
+                                <li>Some CSS properties (like <code>color</code>, <code>font-family</code>) are
+                                    inherited by child elements.</li>
+                                <li>These can be overridden by explicitly setting a different value.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Specificity:</strong>
+                            <ul>
+                                <li>A style with higher specificity overrides a style with lower specificity.</li>
+                                <li>Example:
+                                    <pre>
+                  /* This rule is overridden */
+                  div {
+                    color: green;
+                  }
+                  
+                  /* More specific rule overrides the above */
+                  #uniqueDiv {
+                    color: blue;
+                            </pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Order of Rules:</strong>
+                            <ul>
+                                <li>If two styles have the same specificity, the one defined later in the CSS file takes
+                                    precedence.</li>
+                                <li>Example:
+                                    <pre>
+                  h1 {
+                    color: black;
+                  }
+                  
+                  h1 {
+                    color: red; /* This overrides the earlier rule */
+                  }
+                            </pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Using <code>!important</code>:</strong>
+                            <ul>
+                                <li>Styles with <code>!important</code> take the highest priority.</li>
+                                <li>Example:
+                                    <pre>
+                  p {
+                    color: green !important; /* Overrides any other styles */
+                  }
+                            </pre>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br>
+                    <strong>Key Difference Between Cascading and Overriding:</strong>
+                    <ul>
+                        <li><strong>Cascading:</strong> The process of resolving conflicts by following the CSS priority
+                            rules.</li>
+                        <li><strong>Overriding:</strong> The act of one style replacing another due to the application
+                            of a higher priority rule.</li>
+                    </ul>
+                </dd>
+                <br>
+
+                <dt><strong>What ways can you theme a style? Don't include anything related to JS or libraries for
+                        now</strong></dt>
+                <dd>
+                    Theming in CSS can be achieved by structuring styles to allow easy customization and reuse across a
+                    website or application. Here are some methods for theming without involving JavaScript or libraries:
+
+                    <h3><strong>1. Using CSS Variables (Custom Properties)</strong></h3>
+                    <p>CSS variables allow you to define reusable values that can be dynamically applied and modified in
+                        your stylesheet.</p>
+                    <h4>Example:</h4>
+                    <pre>
+                    <code>
+                    :root {
+                      --primary-color: #4caf50;
+                      --secondary-color: #ff5722;
+                      --font-family: 'Arial, sans-serif';
+                    }
+                  
+                    body {
+                      background-color: var(--primary-color);
+                      color: var(--secondary-color);
+                      font-family: var(--font-family);
+                    }
+                  
+                    /* You can easily switch themes */
+                    .dark-theme {
+                      --primary-color: #333;
+                      --secondary-color: #eee;
+                    }
+                    </code>
+                    </pre>
+                    <p>You can apply themes by changing the class on the <code>&lt;html&gt;</code> or
+                        <code>&lt;body&gt;</code> element:
+                    </p>
+                    <pre>
+                    <code>
+                    &lt;body class="dark-theme"&gt;&lt;/body&gt;
+                    </code>
+                    </pre>
+
+                    <h3><strong>2. Separate Stylesheets for Themes</strong></h3>
+                    <p>Create different CSS files for each theme and load the appropriate stylesheet based on your
+                        requirement.</p>
+                    <h4>Example:</h4>
+                    <pre>
+                    <code>
+                    &lt;link rel="stylesheet" href="theme-light.css"&gt;
+                    &lt;link rel="stylesheet" href="theme-dark.css" disabled id="dark-theme-stylesheet"&gt;
+                    </code>
+                    </pre>
+                    <p>In <code>theme-light.css</code>:</p>
+                    <pre>
+                    <code>
+                    body {
+                      background-color: white;
+                      color: black;
+                    }
+                    </code>
+                    </pre>
+                    <p>In <code>theme-dark.css</code>:</p>
+                    <pre>
+                    <code>
+                    body {
+                      background-color: black;
+                      color: white;
+                    }
+                    </code>
+                    </pre>
+                    <p>You can toggle between them by enabling or disabling the <code>&lt;link&gt;</code> elements.</p>
+
+                    <h3><strong>3. CSS Class-Based Theming</strong></h3>
+                    <p>Define theme-specific classes and apply them to the parent container to switch themes.</p>
+                    <h4>Example:</h4>
+                    <pre>
+                    <code>
+                    /* Light Theme */
+                    .light-theme {
+                      --background-color: white;
+                      --text-color: black;
+                    }
+                  
+                    /* Dark Theme */
+                    .dark-theme {
+                      --background-color: black;
+                      --text-color: white;
+                    }
+                  
+                    /* Apply the variables */
+                    body {
+                      background-color: var(--background-color);
+                      color: var(--text-color);
+                    }
+                    </code>
+                    </pre>
+                    <p>Switching themes:</p>
+                    <pre>
+                    <code>
+                    &lt;body class="dark-theme"&gt;&lt;/body&gt;
+                    </code>
+                    </pre>
+
+                    <h3><strong>4. Theming with Media Queries</strong></h3>
+                    <p>Use media queries to create themes based on user preferences, such as system-level dark mode.</p>
+                    <h4>Example:</h4>
+                    <pre>
+                    <code>
+                    /* Default Theme */
+                    body {
+                      background-color: white;
+                      color: black;
+                    }
+                  
+                    /* Dark Mode Theme */
+                    @media (prefers-color-scheme: dark) {
+                      body {
+                        background-color: black;
+                        color: white;
+                      }
+                    }
+                    </code>
+                    </pre>
+                    <p>This method automatically adjusts the theme based on the user's system preferences.</p>
+
+                    <h3><strong>5. Contextual Theming with Parent Selectors</strong></h3>
+                    <p>Define styles that change based on a parent element's class or ID.</p>
+                    <h4>Example:</h4>
+                    <pre>
+                    <code>
+                    /* General Theme */
+                    body {
+                      background-color: white;
+                      color: black;
+                    }
+                  
+                    /* Parent Context for Dark Theme */
+                    body.dark-theme {
+                      background-color: black;
+                      color: white;
+                    }
+                    </code>
+                    </pre>
+                    <p>Switching themes involves modifying the parent element's class:</p>
+                    <pre>
+                    <code>
+                    &lt;body class="dark-theme"&gt;&lt;/body&gt;
+                    </code>
+                    </pre>
+
+                    <h3><strong>6. Theming with Attribute Selectors</strong></h3>
+                    <p>Use attributes to define themes and style based on their values.</p>
+                    <h4>Example:</h4>
+                    <pre>
+                    <code>
+                    body[data-theme="light"] {
+                      background-color: white;
+                      color: black;
+                    }
+                  
+                    body[data-theme="dark"] {
+                      background-color: black;
+                      color: white;
+                    }
+                    </code>
+                    </pre>
+                    <p>Switching themes:</p>
+                    <pre>
+                    <code>
+                    &lt;body data-theme="dark"&gt;&lt;/body&gt;
+                    </code>
+                    </pre>
+
+                    <h3><strong>Comparison of Methods</strong></h3>
+                    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+                        <tr>
+                            <th>Method</th>
+                            <th>Pros</th>
+                            <th>Cons</th>
+                        </tr>
+                        <tr>
+                            <td>CSS Variables</td>
+                            <td>Dynamic, easy to update, reusable</td>
+                            <td>Limited browser support (older versions)</td>
+                        </tr>
+                        <tr>
+                            <td>Separate Stylesheets</td>
+                            <td>Simple to implement</td>
+                            <td>Less dynamic, requires reload</td>
+                        </tr>
+                        <tr>
+                            <td>Class-Based Theming</td>
+                            <td>Flexible, easily customizable</td>
+                            <td>Requires manual class switching</td>
+                        </tr>
+                        <tr>
+                            <td>Media Queries</td>
+                            <td>Automatic based on user preferences</td>
+                            <td>Limited to predefined conditions</td>
+                        </tr>
+                        <tr>
+                            <td>Parent Contextual Theming</td>
+                            <td>Easy to implement, semantic</td>
+                            <td>Can lead to class proliferation</td>
+                        </tr>
+                        <tr>
+                            <td>Attribute Selectors</td>
+                            <td>Semantic, flexible</td>
+                            <td>Slightly verbose</td>
+                        </tr>
+                    </table>
+                </dd>
+                <br>
+
+                <dt><strong>How does CSS variables help manage consistent styling across a webpage. Also, how to define
+                        and use variables for colors, fonts, and spacings?</strong></dt>
+                <dd>
+                    <h3><strong>CSS Variables for Consistent Styling</strong></h3>
+                    <p>CSS variables (custom properties) allow you to define reusable values in one place, ensuring
+                        consistency across your website. By referencing these variables, you can apply the same styling
+                        to multiple elements. When a change is required, you only need to update the variable, and the
+                        change is reflected everywhere it is used.</p>
+
+                    <h3><strong>Defining CSS Variables</strong></h3>
+                    <p>CSS variables are defined using the <code>--</code> prefix and can be declared globally or within
+                        specific selectors.</p>
+
+                    <ul>
+                        <li>
+                            <strong>Global Variables:</strong>
+                            <ul>
+                                <li>Defined in the <code>:root</code> pseudo-class, which applies globally.</li>
+                                <li>Example:</li>
+                            </ul>
+                            <pre><code>:root {
+                    --primary-color: #4caf50;
+                    --secondary-color: #ff5722;
+                    --font-family: 'Arial, sans-serif';
+                    --spacing-unit: 16px;
+                  }</code></pre>
+                        </li>
+
+                        <li>
+                            <strong>Scoped Variables:</strong>
+                            <ul>
+                                <li>Defined within specific selectors to apply locally.</li>
+                                <li>Example:</li>
+                            </ul>
+                            <pre><code>.dark-theme {
+                    --primary-color: #333;
+                    --secondary-color: #eee;
+                  }</code></pre>
+                        </li>
+                    </ul>
+
+                    <h3><strong>Using CSS Variables</strong></h3>
+                    <p>CSS variables are used with the <code>var()</code> function.</p>
+
+                    <h4><strong>Colors Example:</strong></h4>
+                    <pre><code>:root {
+                    --background-color: #ffffff;
+                    --text-color: #333333;
+                    --link-color: #1e90ff;
+                  }
+                  
+                  body {
+                    background-color: var(--background-color);
+                    color: var(--text-color);
+                  }
+                  
+                  a {
+                    color: var(--link-color);
+                  }</code></pre>
+
+                    <h4><strong>Fonts Example:</strong></h4>
+                    <pre><code>:root {
+                    --font-primary: 'Roboto', sans-serif;
+                    --font-secondary: 'Georgia', serif;
+                  }
+                  
+                  h1, h2, h3 {
+                    font-family: var(--font-primary);
+                  }
+                  
+                  blockquote {
+                    font-family: var(--font-secondary);
+                  }</code></pre>
+
+                    <h4><strong>Spacing Example:</strong></h4>
+                    <pre><code>:root {
+                    --spacing-small: 8px;
+                    --spacing-medium: 16px;
+                    --spacing-large: 32px;
+                  }
+                  
+                  button {
+                    padding: var(--spacing-medium);
+                  }
+                  
+                  .container {
+                    margin: var(--spacing-large);
+                  }</code></pre>
+
+                    <h3><strong>Combining Variables</strong></h3>
+                    <p>You can combine variables or use them as part of other CSS values.</p>
+
+                    <h4><strong>Example:</strong></h4>
+                    <pre><code>:root {
+                    --base-size: 16px;
+                    --spacing-small: calc(var(--base-size) / 2);
+                    --spacing-large: calc(var(--base-size) * 2);
+                  }
+                  
+                  p {
+                    margin-bottom: var(--spacing-small);
+                  }
+                  
+                  section {
+                    padding: var(--spacing-large);
+                  }</code></pre>
+
+                    <h3><strong>Advantages of CSS Variables</strong></h3>
+                    <ul>
+                        <li><strong>Centralized Styling:</strong> Manage all key styles (like colors, fonts, and
+                            spacings) from a single location.</li>
+                        <li><strong>Dynamic Updates:</strong> Values can be updated at runtime (e.g., for theming).</li>
+                        <li><strong>Reusability:</strong> Use the same value across multiple rules without repetition.
+                        </li>
+                        <li><strong>Ease of Maintenance:</strong> Modify a variable in one place to update styles
+                            everywhere.</li>
+                    </ul>
+
+                    <h3><strong>Complete Example: Colors, Fonts, and Spacings</strong></h3>
+                    <pre><code>:root {
+                    /* Colors */
+                    --primary-color: #6200ea;
+                    --secondary-color: #03dac6;
+                    --background-color: #ffffff;
+                    --text-color: #333333;
+                  
+                    /* Fonts */
+                    --font-body: 'Roboto', sans-serif;
+                    --font-heading: 'Poppins', sans-serif;
+                  
+                    /* Spacings */
+                    --spacing-small: 8px;
+                    --spacing-medium: 16px;
+                    --spacing-large: 24px;
+                  }
+                  
+                  body {
+                    background-color: var(--background-color);
+                    color: var(--text-color);
+                    font-family: var(--font-body);
+                  }
+                  
+                  h1 {
+                    font-family: var(--font-heading);
+                    margin-bottom: var(--spacing-medium);
+                    color: var(--primary-color);
+                  }
+                  
+                  button {
+                    background-color: var(--secondary-color);
+                    color: var(--background-color);
+                    padding: var(--spacing-small) var(--spacing-medium);
+                  }</code></pre>
+
+                    <p>This approach ensures a consistent, easily modifiable design system for your webpage.</p>
+                </dd>
+                <br>
+
+                <dt><strong>How to link one CSS file to another and use variables in the other?</strong></dt>
+                <dd>
+                    You can link one CSS file to another by importing it using the `@import` rule. This is especially
+                    useful when you want to organize your styles into modular files, such as a global variables file
+                    that can be used across multiple stylesheets.
+
+                    <h3>Steps to Link CSS Files and Use Variables</h3>
+
+                    <ol>
+                        <li><strong>Create a Variables File</strong>
+                            Define all your reusable CSS variables in a separate file, e.g., `variables.css`:
+                            <pre><code>
+                  /* variables.css */
+                  :root {
+                    --primary-color: #4caf50;
+                    --secondary-color: #ff5722;
+                    --font-family: 'Roboto', sans-serif;
+                    --spacing-unit: 16px;
+                  }
+                        </code></pre>
+                        </li>
+                        <li><strong>Import the Variables File into Another CSS File</strong>
+                            Use the `@import` rule to include `variables.css` in another CSS file. For example, in
+                            `styles.css`:
+                            <pre><code>
+                  /* styles.css */
+                  @import url('variables.css');
+                  
+                  body {
+                    background-color: var(--primary-color);
+                    color: var(--secondary-color);
+                    font-family: var(--font-family);
+                  }
+                  
+                  button {
+                    padding: var(--spacing-unit);
+                    background-color: var(--secondary-color);
+                    color: #fff;
+                  }
+                        </code></pre>
+                        </li>
+                        <li><strong>Link the Main CSS File in HTML</strong>
+                            Link only the main CSS file (`styles.css`) to your HTML document using the `
+                            <link>` tag. The imported `variables.css` will automatically be included:
+                            <pre><code>
+                  &lt;!DOCTYPE html>
+                  &lt;html lang="en">
+                  &lt;head>
+                    &lt;meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    &lt;title>CSS Variable Import</title>
+                    &lt;link rel="stylesheet" href="styles.css">
+                  &lt;/head>
+                  &lt;body>
+                    &lt;h1>Using CSS Variables</h1>
+                    &lt;button>Click Me</button>
+                  &lt;/body>
+                  &lt;/html>
+                        </code></pre>
+                        </li>
+                    </ol>
+
+                    <h3>Key Notes</h3>
+                    <ul>
+                        <li><strong>Cascading Effect:</strong> Variables defined in `variables.css` are global, so they
+                            can be used in any CSS file where `variables.css` is imported.</li>
+                        <li><strong>Relative Path:</strong> Ensure the path in `@import` is correct relative to the
+                            importing file (`styles.css` in this case).</li>
+                        <li><strong>Multiple Imports:</strong> You can import multiple CSS files if needed:
+                            <pre><code>
+                  @import url('reset.css');
+                  @import url('variables.css');
+                        </code></pre>
+                        </li>
+                        <li><strong>Modular Design:</strong> Keep variables separate for better maintainability and
+                            reusability.</li>
+                    </ul>
+                </dd>
+            </dl>
+        </section>
+    </main>
+</body>
+
+</html>

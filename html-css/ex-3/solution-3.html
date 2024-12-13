@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #111; color: #fff">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 - Lv3</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    <style>
+        :root {
+            --main-color: #ff9800;
+            --secondary-color: #ff5722;
+            --background-color: #111;
+            --text-color: #fff;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: var(--main-color);
+            color: var(--background-color);
+            padding: 0.5em;
+        }
+
+        article {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid var(--secondary-color);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        blockquote {
+            background-color: var(--secondary-color);
+            border-left: 4px solid var(--main-color);
+            color: var(--background-color);
+            padding: 0.5em;
+        }
+    </style>
+</head>
+
+<body style="background-color: var(--background-color); color: var(--text-color)">
+    <main>
+        <header>
+            <h1>My Blog Post</h1>
+        </header>
+        <article>
+            <h2>Exploring Classless CSS (MVP.css)</h2>
+            <p>
+                Classless CSS is a minimalistic way to style web pages without assigning classes or IDs to elements.
+            </p>
+            <h2>Classless CSS Features</h2>
+            <ul>
+                <li>Classless CSS is minimalistic</li>
+                <li>Classless CSS is easy to use</li>
+            </ul>
+            <blockquote>
+                <p>Classless CSS is a great way to style web pages without assigning those hard-to-keep-track-of classes or IDs.</p>
+            </blockquote>
+            <p>
+                You can use the <em>em</em> element to add emphasis to words or phrases.
+            </p>
+        </article>
+    </main>
+
+</body>
+
+</html>

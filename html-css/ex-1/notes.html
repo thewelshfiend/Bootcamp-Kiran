@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        p,
+        ul,
+        ol {
+            margin-bottom: 10px;
+        }
+
+        blockquote {
+            border-left: 4px solid #dfdfdf;
+            font-style: italic;
+            margin: 10px 0px 10px 20px;
+            padding-left: 20px;
+        }
+
+        code {
+            background-color: #dfdfdf;
+            padding: 2px 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Thought Process</h2>
+                <h3>Level 1</h3>
+                <ul>
+                    <li>
+                        <h4>Purpose:</h4>
+                        <p>The primary goal of this webpage was to create a simple and structured layout that
+                            introduces
+                            my favorite movies and books while showcasing basic HTML elements and semantic
+                            structure.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h4>Header:</h4>
+                        <p>
+                            Included a <code>&lt;header&gt;</code> element with an <code>&lt;h1&gt;</code> tag
+                            to
+                            represent the main title of the page, "My First Webpage", as specified in the
+                            instructions.
+                            This sets the context and purpose of the page.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h4>Main Content:</h4>
+                        <ul>
+                            <li>
+                                <h5>Section and Articles:</h5>
+                                <p>
+                                    Used a <code>&lt;section&gt;</code> to logically group related content.
+                                    Inside the
+                                    section, two <code>&lt;article&gt;</code> tags were used to separate
+                                    "Favorite
+                                    Movies" and "Favorite Books."
+                                </p>
+                            </li>
+
+                            <li>
+                                <h5>Lists:</h5>
+                                <p>
+                                    For movies, an ordered list (<code>&lt;ol&gt;</code>) was chosen to imply a
+                                    ranked
+                                    preference. For books, an unordered list (<code>&lt;ul&gt;</code>) was used
+                                    with the
+                                    "circle" bullet type to represent items without any specific order.
+                                </p>
+                            </li>
+
+                            <li>
+                                <h5>Figure:</h5>
+                                <p>
+                                    Added a <code>&lt;figure&gt;</code> to display an image of the "Inception"
+                                    movie
+                                    poster, with a clickable link to its IMDb review. The <code>alt</code> and
+                                    <code>title</code> attributes were used to provide context for the image.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h4>Footer:</h4>
+                        <p>
+                            Included a <code>&lt;footer&gt;</code> with a contact link. The
+                            <code>&lt;strong&gt;</code>
+                            tag highlights the "Contact" label, and the <code>&lt;a&gt;</code> tag links to an
+                            example
+                            email address for communication.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h4>Accessibility and Semantics:</h4>
+                        <ul>
+                            <li>
+                                Used semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+                                <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code> to make the
+                                structure
+                                clear for both developers and assistive technologies.
+                            </li>
+                            <li>
+                                Added <code>alt</code> attributes for images and used descriptive link text for
+                                better
+                                usability and accessibility.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Level 2</h3>
+                <ul>
+                    <li>
+                        <h4>Purpose:</h4>
+                        <p>The goal of this update was to enhance the webpage by adding navigation, improving content
+                            organization, and introducing new sections, while maintaining a golden layout structure.</p>
+                    </li>
+
+                    <li>
+                        <h4>Navigation:</h4>
+                        <p>Introduced 2 <code>&lt;nav&gt;</code> elements containing an unordered list
+                            (<code>&lt;ul&gt;</code>) of links to different sections of the page (Movies, Books, and
+                            Contact). This allows for easy navigation and improved user experience.</p>
+                    </li>
+
+                    <li>
+                        <h4>Main Content:</h4>
+                        <ul>
+                            <li>
+                                <h5>Section and Articles:</h5>
+                                <p>Kept the <code>&lt;section&gt;</code> tag to group related content. Two
+                                    <code>&lt;article&gt;</code> tags were used to maintain "Favorite Movies" and
+                                    "Favorite Books" sections, and added <code>id</code> attributes for smooth
+                                    navigation.
+                                </p>
+                            </li>
+
+                            <li>
+                                <h5>New Section (Items for Sale):</h5>
+                                <p>A new section containing a <code>&lt;table&gt;</code> was added to display items for
+                                    sale, with columns for name, price, and description. This enhances the page's
+                                    functionality and adds more content.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h4>Accessibility and Semantics:</h4>
+                        <ul>
+                            <li>Added <code>id</code> attributes to allow smooth scrolling between sections via
+                                navigation links. Also ensured that <code>alt</code> text for images and descriptive
+                                link text were maintained for better accessibility.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Level 3</h3>
+                <ul>
+                    <li>
+                        <h4>Purpose:</h4>
+                        <p>The purpose of this update was to enhance the content by adding more information, and
+                            refining the structure while maintaining the overall design of the webpage.</p>
+                    </li>
+
+                    <li>
+                        <h4>Main Content:</h4>
+                        <ul>
+                            <li>
+                                <h5>Movies Section:</h5>
+                                <p>Added a <code>&lt;p&gt;</code> tag under the "Favorite Movies" article to provide a
+                                    brief description of each movie. This gives users additional context and enhances
+                                    the content.</p>
+                            </li>
+
+                            <li>
+                                <h5>Books Section:</h5>
+                                <p>Similar to the movies section, a <code>&lt;p&gt;</code> tag was added below the list
+                                    of books to provide a description of each book, giving the audience a better
+                                    understanding of the choices.</p>
+                            </li>
+
+                            <li>
+                                <h5>Items for Sale Section:</h5>
+                                <p>An additional <code>&lt;p&gt;</code> tag under the "Items for
+                                    Sale" table. This paragraph gives further clarification about the prices and
+                                    descriptions of the items, ensuring the user understands that the prices are in USD
+                                    and that the descriptions may not be exact.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+        </section>
+
+        <section>
+            <h2>Queries</h2>
+            <article>
+                <h2>LLM link: <a href="https://chatgpt.com/share/675a8797-a9cc-8009-975e-20246019b20f">https://chatgpt.com/share/675a8797-a9cc-8009-975e-20246019b20f</a></h2>
+            </article>
+            <dl>
+                <dt><strong>What are semantic elements?</strong></dt>
+                <dd>
+                    <p>
+                        Semantic elements in HTML are those that clearly describe their meaning in a way that is
+                        understandable both to the browser and to developers. These elements convey the purpose of the
+                        content they enclose, making the structure of the web page more meaningful and easier to
+                        understand.
+                    </p>
+                    <h3>Examples of Semantic Elements:</h3>
+                    <h4>Structural Elements:</h4>
+                    <ul>
+                        <li><code>&lt;header&gt;</code>: Represents a container for introductory content or navigational
+                            links.</li>
+                        <li><code>&lt;nav&gt;</code>: Defines a set of navigation links.</li>
+                        <li><code>&lt;main&gt;</code>: Indicates the main content of the document.</li>
+                        <li><code>&lt;section&gt;</code>: Defines a section in the document, typically with a heading.
+                        </li>
+                        <li><code>&lt;article&gt;</code>: Represents self-contained content that can be independently
+                            distributed or reused.</li>
+                        <li><code>&lt;footer&gt;</code>: Contains footer information like copyright or contact links.
+                        </li>
+                        <li><code>&lt;aside&gt;</code>: Defines content that is tangentially related to the content
+                            around it, such as a sidebar.</li>
+                    </ul>
+
+                    <h4>Text Content Elements:</h4>
+                    <ul>
+                        <li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, etc.: Headings
+                            that structure the document hierarchy.</li>
+                        <li><code>&lt;p&gt;</code>: Defines a paragraph.</li>
+                        <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>: Lists (unordered,
+                            ordered, and list items).</li>
+                        <li><code>&lt;blockquote&gt;</code>: For quoted text.</li>
+                        <li><code>&lt;time&gt;</code>: Represents date or time values.</li>
+                        <li><code>&lt;address&gt;</code>: Represents contact information.</li>
+                    </ul>
+
+                    <h4>Media Elements:</h4>
+                    <ul>
+                        <li><code>&lt;figure&gt;</code>: Groups media content like images or illustrations with a
+                            caption.</li>
+                        <li><code>&lt;figcaption&gt;</code>: Provides a caption for the <code>&lt;figure&gt;</code>.
+                        </li>
+                    </ul>
+
+                    <h4>Benefits of Using Semantic Elements:</h4>
+                    <ul>
+                        <li><strong>Improved Accessibility:</strong> Screen readers and assistive technologies can
+                            interpret content better.</li>
+                        <li><strong>SEO Benefits:</strong> Search engines can understand the structure of the webpage,
+                            improving ranking.</li>
+                        <li><strong>Code Readability:</strong> Easier for developers to read and maintain.</li>
+                        <li><strong>Future-Proofing:</strong> Adheres to web standards, ensuring better compatibility
+                            across browsers and devices.</li>
+                    </ul>
+
+                    <p>
+                        Non-semantic elements, like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>, do not
+                        convey any information about their content and are typically used for styling or scripting
+                        purposes. By using semantic elements, you ensure that your HTML is more meaningful and
+                        descriptive.
+                    </p>
+                </dd>
+
+                <dt><strong>What are the header elements?</strong></dt>
+                <dd>
+                    <h3>Header Elements in HTML</h3>
+                    <p>
+                        In HTML, header elements are semantic elements used to define and organize headings,
+                        subheadings, and introductory content in a document or section. They help structure the content
+                        and improve accessibility and SEO.
+                    </p>
+
+                    <h4>Types of Header Elements:</h4>
+
+                    <h5>Heading Elements (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>):</h5>
+                    <ul>
+                        <li>Represent the titles and subtitles in a document.</li>
+                        <li>Define a hierarchy, where <code>&lt;h1&gt;</code> is the most important heading (typically
+                            the main title), and <code>&lt;h6&gt;</code> is the least important.</li>
+                    </ul>
+                    <h5>Usage:</h5>
+                    <ul>
+                        <li>Each document should have one <code>&lt;h1&gt;</code> for the main heading.</li>
+                        <li>Use <code>&lt;h2&gt;</code> to <code>&lt;h6&gt;</code> for subheadings, maintaining a
+                            logical structure.</li>
+                    </ul>
+
+                    <h5>The <code>&lt;header&gt;</code> Element:</h5>
+                    <ul>
+                        <li>Defines a container for introductory content or navigational links.</li>
+                        <li>Typically includes:
+                            <ul>
+                                <li>Logos</li>
+                                <li>Page titles</li>
+                                <li>Navigation menus</li>
+                            </ul>
+                        </li>
+                        <li>Can be used within <code>&lt;body&gt;</code> or inside sections like
+                            <code>&lt;article&gt;</code> or <code>&lt;section&gt;</code> to provide a localized header.
+                        </li>
+                    </ul>
+
+                    <h4>Key Notes:</h4>
+
+                    <h5>Semantic Importance:</h5>
+                    <ul>
+                        <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> help search engines and assistive
+                            technologies understand the content structure.</li>
+                        <li><code>&lt;header&gt;</code> helps group introductory or navigational content, adding meaning
+                            to the layout.</li>
+                    </ul>
+
+                    <h5>Accessibility and SEO:</h5>
+                    <ul>
+                        <li>Use headings hierarchically to create a logical flow.</li>
+                        <li>Avoid skipping levels (e.g., jumping from <code>&lt;h1&gt;</code> to <code>&lt;h3&gt;</code>
+                            without an <code>&lt;h2&gt;</code>).</li>
+                    </ul>
+
+                    <h5>Header vs. Head:</h5>
+                    <ul>
+                        <li>Do not confuse <code>&lt;header&gt;</code> with <code>&lt;head&gt;</code>.</li>
+                        <li><code>&lt;header&gt;</code> is for visible page content like titles and menus.</li>
+                        <li><code>&lt;head&gt;</code> is for metadata, scripts, and stylesheets.</li>
+                    </ul>
+                </dd>
+
+                <dt><strong>How do you use CSS and JS in HTML?</strong></dt>
+                <dd>
+                    <h3>Using CSS and JavaScript in HTML</h3>
+                    <p>
+                        CSS (Cascading Style Sheets) and JavaScript (JS) are used in HTML to enhance the styling and
+                        interactivity of web pages. Here’s how to include them in your HTML document:
+                    </p>
+
+                    <h4>1. Using CSS in HTML</h4>
+
+                    <h5>A. Inline CSS</h5>
+                    <p>Add the <code>style</code> attribute directly to an HTML element for quick styling.</p>
+
+                    <h5>B. Internal CSS</h5>
+                    <p>Use the <code>&lt;style&gt;</code> tag within the <code>&lt;head&gt;</code> section for
+                        page-specific styles.</p>
+
+                    <h5>C. External CSS</h5>
+                    <p>Link to an external <code>.css</code> file using the <code>&lt;link&gt;</code> tag in the
+                        <code>&lt;head&gt;</code> section.
+                    </p>
+
+                    <h4>2. Using JavaScript in HTML</h4>
+
+                    <h5>A. Inline JavaScript</h5>
+                    <p>Add the <code>onclick</code> attribute or other event handlers directly to HTML elements.</p>
+
+                    <h5>B. Internal JavaScript</h5>
+                    <p>Use the <code>&lt;script&gt;</code> tag within the <code>&lt;head&gt;</code> or
+                        <code>&lt;body&gt;</code> section for page-specific scripts.
+                    </p>
+
+                    <h5>C. External JavaScript</h5>
+                    <p>Link to an external <code>.js</code> file using the <code>&lt;script&gt;</code> tag.</p>
+
+                    <h4>3. Combining CSS and JavaScript</h4>
+                    <p>Both CSS and JS can be used together to style and add interactivity.</p>
+
+                    <p>By separating CSS and JS into external files, you promote reusability and maintain cleaner HTML
+                        code.</p>
+                </dd>
+
+                <dt><strong>How to use html attributes of width and height? Be brief</strong></dt>
+                <dd>
+                    <h3>Using the Width and Height Attributes in HTML</h3>
+                    <p>
+                        The <code>width</code> and <code>height</code> attributes in HTML are used to specify the
+                        dimensions of certain elements, typically in pixels (default) or as a percentage.
+                    </p>
+
+                    <h4>Usage Examples</h4>
+
+                    <h5>1. Images (<code>&lt;img&gt;</code>)</h5>
+                    <p>Set the image dimensions.</p>
+                    <pre>
+                      <code>&lt;img src="image.jpg" width="300" height="200" alt="Example Image"&gt;</code>
+                    </pre>
+
+                    <h5>2. Video or Audio (<code>&lt;video&gt;</code> / <code>&lt;audio&gt;</code>)</h5>
+                    <p>Specify the playback size.</p>
+
+                    <h5>3. Canvas (<code>&lt;canvas&gt;</code>)</h5>
+                    <p>Define the drawable area.</p>
+
+                    <h5>4. Table Cells (<code>&lt;table&gt;</code>)</h5>
+                    <p>Set cell or table dimensions (deprecated but still works).</p>
+
+                    <h4>Best Practices</h4>
+                    <ul>
+                        <li>Use CSS (<code>width</code> and <code>height</code> properties) for better flexibility and
+                            responsiveness.</li>
+                        <li>Use the <code>width</code> and <code>height</code> attributes for intrinsic dimensions where
+                            required (like <code>&lt;img&gt;</code> or <code>&lt;canvas&gt;</code>).</li>
+                    </ul>
+                </dd>
+
+                <dt><strong>What is a golden layout structure?</strong></dt>
+                <dd>
+                    <h3>Golden Layout Structure in Web Design</h3>
+                    <p>
+                        In web design, a golden layout structure is used to arrange elements on a page (like text,
+                        images, and navigation) in a way that draws the user's attention naturally and feels balanced.
+                    </p>
+
+                    <h4>Key Characteristics:</h4>
+                    <ul>
+                        <li><strong>Proportional Sections:</strong> The layout divides the screen or container into two
+                            sections: one larger (1.618) and one smaller (1).<br>
+                            Example: A content area taking 62% of the width and a sidebar taking 38%.</li>
+                        <li><strong>Visual Hierarchy:</strong> Important content (like headlines or images) is placed in
+                            the larger section.<br>
+                            Secondary elements (like sidebars or navigation) are placed in the smaller section.</li>
+                        <li><strong>Golden Grid System:</strong> Uses the golden ratio to define grid layouts, such as
+                            rows and columns for responsive designs.</li>
+                        <li><strong>Dynamic Focus Points:</strong> Helps guide the user's eye naturally from the most
+                            important content to the less important areas.</li>
+                    </ul>
+
+                    <h4>Benefits</h4>
+                    <ul>
+                        <li><strong>Aesthetics:</strong> Creates visually pleasing and balanced designs.</li>
+                        <li><strong>Focus:</strong> Directs user attention naturally.</li>
+                        <li><strong>Flexibility:</strong> Adapts well to different screen sizes and resolutions.</li>
+                        <li><strong>Timeless:</strong> Inspired by classic design principles, ensuring relevance.</li>
+                    </ul>
+
+                    <p>Golden layouts are widely used in websites, apps, and even printed media to achieve an elegant,
+                        professional appearance.</p>
+                </dd>
+            </dl>
+        </section>
+    </main>
+</body>
+
+</html>

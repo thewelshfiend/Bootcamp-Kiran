@@ -1,0 +1,10 @@
+:root {
+    --primary-color: #2980b9;
+    --secondary-color: #73e677;
+    --background-color: #f9f9f9;
+    --header-font-family: 'Poppins', sans-serif;
+    --text-color: #333;
+    --body-font-family: 'Roboto', sans-serif;
+    --secondary-table-color: #999;
+    --spacing-unit: 16px;
+}

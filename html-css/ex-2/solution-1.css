@@ -1,0 +1,79 @@
+@import url("variables-1.css");
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font-family);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: var(--spacing-unit);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: var(--secondary-color);
+    padding: var(--spacing-unit);
+    width: 200px;
+}
+
+.main-content {
+    flex: 1;
+    padding: var(--spacing-unit);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: var(--spacing-unit);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: var(--spacing-unit);
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+}
+
+article {
+    margin-bottom: var(--spacing-unit);
+}
+
+h1,
+h2 {
+    font-family: var(--header-font-family);
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-unit);
+}
+
+th,
+td {
+    border: 1px solid var(--text-color);
+    padding: var(--spacing-unit);
+    text-align: left;
+}

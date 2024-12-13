@@ -1,0 +1,61 @@
+@import url("variables-3.css");
+
+body {
+    background-color: var(--table-bg-color);
+    display: block;
+    position: relative;
+    width: clamp(95vw, 99vw, 100vw);
+    height: 97vh;
+}
+
+main {
+    background-color: var(--table-header-bg-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(40vw, 60vw, 80vw);
+    height: clamp(40vh, 65vh, 80vh);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 var(--table-border-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid var(--table-border-color);
+    text-align: left;
+    font-size: calc(0.8em + (1em - 0.8em) * (100vw - 320px) / (1280 - 320));
+}
+
+th {
+    background-color: var(--table-header-bg-color);
+    color: var(--table-header-font-color);
+}
+
+tr:nth-child(even) {
+    background-color: var(--table-hover-bg-color);
+}
+
+tr:hover {
+    background-color: var(--table-row-hover-font-color);
+}
+
+section {
+    margin: 20px 0;
+}
+
+p {
+    padding: 10px;
+    font-size: calc(0.8em + (1em - 0.8em) * (100vw - 320px) / (1280 - 320));
+}
+
+h2 {
+    text-align: center;
+    font-size: calc(1.2em + (2em - 1.2em) * (100vw - 320px) / (1280 - 320));
+}
