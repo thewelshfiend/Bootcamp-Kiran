@@ -1,6 +1,6 @@
 # HTML and CSS Exercises
 
-This repository contains exercises completed for the HTML and CSS course on The Odin Project.
+This repository contains exercises completed for the UI Bootcamp.
 
 ## Exercises
 
@@ -10,3 +10,7 @@ This repository contains exercises completed for the HTML and CSS course on The 
 * [Exercise 4](html-css/ex-4) - Create a webpage with a table to display items for sale, and use CSS variables for easier maintenance.
 * [Exercise 5](html-css/ex-5) - Create a responsive webpage with a grid system, including a header, main content area, sidebars, and footer.
 * [Exercise 6](html-css/ex-6) - Create a webpage with a responsive layout, using a CSS framework and CSS Grid.
+
+## Deployed Landing Page URL
+
+The landing page for this repository is available at: [Week 1 Landing Page](https://kiran-thomas-jacob.netlify.app/).
